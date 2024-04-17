@@ -1,0 +1,72 @@
+<app-navbar></app-navbar>
+<div class="flex-container ">
+  <app-sidebar></app-sidebar>
+
+   
+    <!-- app.component.html -->
+    <div class="container ">
+        <div class="profile-header row">
+          <div class="col-md-8 mb-3 mb-md-0">
+            <div class="section-name border-bottom-green">
+              <h4>{{ 'profile'}}</h4>
+            </div>
+          </div>
+          <div class="col-md-4 text-md-right">
+            <div class="actions">
+              <button type="button" class="btn btn-outline-primary" (click)="goBack()">
+                {{ 'back' }}
+              </button>
+              <button type="button" class="btn btn-outline-primary" (click)="openEditProfileModal()">
+                {{ 'edit_profile' }}
+              </button>
+            </div>
+          </div>
+        </div>
+      
+        <div class="profile-container row mt-4">
+          <div class="col-lg-6">
+            <div class="personal-information">
+              <h5>{{ 'Personal Information' }}</h5>
+              <p>{{ 'Name: ' }} {{ userProfile.name }}</p>
+              <p>{{ 'Email: ' }} {{ userProfile.email }}</p>
+              <!-- Add more information as needed -->
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Edit Profile Modal -->
+      <div class="modal" tabindex="-1" role="dialog" [ngClass]="{ 'd-block': isEditProfileModalOpen }">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">{{ 'Edit Profile' }}</h5>
+              <button type="button" class="close" (click)="closeEditProfileModal()" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <!-- Edit Profile Form (Assuming you have a form component for editing) -->
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" (click)="closeEditProfileModal()">{{ 'Close' }}</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+  
+<!--  this is change password popup <---> 
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
